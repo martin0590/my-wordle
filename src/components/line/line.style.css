@@ -1,0 +1,39 @@
+.row-container{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+  }
+  
+  .tile{
+    border: 1px solid #838481;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    user-select: none;
+  }
+
+  .correct{
+    background-color: #538D4E;
+  }
+
+  .close{
+    background-color: #B59F3B
+    ;
+  }
+
+  .incorrect{
+    background-color: #3A3A3C
+    ;
+  }
+
+  /*
+  #538D4E
+  #B59F3B 
+  #3A3A3C
+  #818384
+  #121213 
+  */
