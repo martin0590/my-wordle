@@ -114,3 +114,7 @@ body{
 .modal::backdrop{
   background: rgba(0, 0, 0, 0.45);
 }
+
+.dialog-solution{
+  color: #121312;
+}

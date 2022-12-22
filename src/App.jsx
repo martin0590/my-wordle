@@ -10,7 +10,7 @@ function App() {
   const [words, setWords] = useState('');
   const [isGameOver, setIsGameOver] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [textWinOrLose, setTextWinOrLose] = useState("you've won!!!");
+  const [textWinOrLose, setTextWinOrLose] = useState("You've won");
   
     const fetchWord = () =>{
       setIsDialogOpen(false);
@@ -18,6 +18,7 @@ function App() {
       setSolution(randomWord);
       setGuesses(Array(6).fill(null));
       setIsGameOver(false);
+      setTextWinOrLose("You've won");
     }
 
   useEffect(()=>{
@@ -81,9 +82,10 @@ function App() {
     <dialog open={isDialogOpen ? true : false} className='modal'>
       <h2 className='dialog--h2'>{textWinOrLose}</h2>
       <p className='dialog--p'>Do you want another random word?</p>
+      <p className='dialog--p'>Correct word: <span className='dialog-solution'>{solution}</span></p>
       <div className='dialog--button_box'>
-        <button onClick={fetchWord}>Yes</button>
-        <button onClick={()=>{setIsDialogOpen(false)}}>No</button>
+        <button onClick={fetchWord} className='button-yes'>Yes</button>
+        <button onClick={()=>{setIsDialogOpen(false)}} className='button-no'>No</button>
       </div>
     </dialog>
   </div>
